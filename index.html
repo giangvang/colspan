@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        /* Căn trái cho cột nội dung để dễ đọc hơn */
+        td:nth-child(3) {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+    
+    <table>
+        <tr>
+            <th>Ngày</th>
+            <th>Giờ</th>
+            <th>Nội dung cuộc họp</th>
+        </tr>
+        
+        <!-- Sử dụng rowspan="2" để gộp 2 hàng của cột Ngày vì Thứ Hai có 2 cuộc họp -->
+        <tr>
+            <td rowspan="2">Thứ Hai<br>(19/10)</td>
+            <td>08:00 - 10:00</td>
+            <td>Họp giao ban đầu tuần phòng IT</td>
+        </tr>
+        <tr>
+            <td>14:00 - 16:00</td>
+            <td>Báo cáo tiến độ thiết kế CSDL dự án LibManager</td>
+        </tr>
+        
+        <!-- Hàng bình thường không gộp ô -->
+        <tr>
+            <td>Thứ Ba<br>(20/10)</td>
+            <td>09:00 - 11:30</td>
+            <td>Review code hệ thống</td>
+        </tr>
+        
+        <!-- Sử dụng colspan="2" để gộp cột Giờ và Nội dung cho sự kiện kéo dài cả ngày -->
+        <tr>
+            <td>Thứ Tư<br>(21/10)</td>
+            <td colspan="2" style="background-color: #fff3cd; font-weight: bold; text-align: center;">
+                Đào tạo nội bộ & Team Building (Nghỉ các cuộc họp khác)
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
